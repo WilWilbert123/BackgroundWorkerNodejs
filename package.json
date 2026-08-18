@@ -1,0 +1,16 @@
+{
+  "name": "supabase-mssql-sync-worker",
+  "version": "1.0.0",
+  "description": "Background worker to sync Supabase orders to MSSQL",
+  "main": "worker.js",
+  "scripts": {
+    "start": "node worker.js",
+    "pm2-start": "pm2 start worker.js --name supabase-sync",
+    "pm2-stop": "pm2 stop supabase-sync"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "dotenv": "^16.4.1",
+    "mssql": "^10.0.2"
+  }
+}
